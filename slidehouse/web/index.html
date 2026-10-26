@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SlideHouse</title>
+  <link rel="stylesheet" href="/app/slidehouse.css">
+  <script type="module" src="/app/js/app.js"></script>
+</head>
+<body>
+  <header>
+    <strong><span class="logo">⌂</span> SlideHouse</strong>
+    <select id="decks" aria-label="Presentation"></select>
+    <button id="reload">Reload</button>
+    <span class="spacer"></span>
+    <button id="undo">Undo</button>
+    <button id="redo">Redo</button>
+    <button id="copy-element" title="Copy the selected element (Ctrl/Cmd+C)">Copy element</button>
+    <button id="paste-element" title="Paste the copied element (Ctrl/Cmd+V)">Paste element</button>
+    <button id="duplicate-deck" title="Copy this whole deck as a new presentation">Copy deck…</button>
+    <button id="download">Download HTML</button>
+    <button id="export-pdf">Export PDF</button>
+    <button id="save" class="primary">Save</button>
+    <button id="present">Present ↗</button>
+  </header>
+  <main>
+    <nav aria-label="Slides">
+      <div class="panel-title">SLIDES <span id="count"></span></div>
+      <div class="tools"><button id="add-slide">+ Slide</button><button id="duplicate">Duplicate</button><button id="delete-slide">Delete</button><button id="up" title="Move slide earlier">↑</button><button id="down" title="Move slide later">↓</button></div>
+      <div id="outline"></div>
+    </nav>
+    <section class="workspace">
+      <div class="preview-header">
+        <span class="nav-group"><button id="prev-slide" title="Previous slide (←)">‹</button><span id="slide-title">Choose a presentation</span><button id="next-slide" title="Next slide (→)">›</button></span>
+        <span>Live preview · click a block to inspect · ← → or ‹ › to change slide</span>
+      </div>
+      <iframe id="preview" title="Slide preview" sandbox="allow-scripts allow-same-origin" allow="fullscreen"></iframe>
+      <div class="hint">Select a block, then Ctrl/Cmd+C (or <b>Copy element</b>) and paste it on another slide or in another SlideHouse tab. Pasting an element from another deck copies the files it needs.</div>
+      <details id="source-panel">
+        <summary>Advanced · slide HTML</summary>
+        <textarea id="source" spellcheck="false" aria-label="Slide HTML"></textarea>
+        <button id="apply-source">Apply slide HTML</button>
+      </details>
+    </section>
+    <aside>
+      <div class="panel-title">ELEMENTS</div>
+      <div class="tools"><button id="add-text">+ Text</button><button id="add-math">+ Equation</button><button id="add-image">+ Image</button></div>
+      <div id="elements"></div>
+      <div id="inspector"><p class="muted">Select an element to edit its content and layout.</p></div>
+    </aside>
+  </main>
+  <footer><span id="status" role="status">Loading presentations…</span><span>Local-first · HTML files · No account needed</span></footer>
+  <input id="image-file" type="file" accept="image/png,image/jpeg,image/gif,image/webp,image/avif" hidden>
+</body>
+</html>

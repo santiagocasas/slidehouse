@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="240" viewBox="0 0 320 240">
+<rect width="320" height="240" fill="#f4f7fa"/>
+<rect x="40" y="120" width="40" height="80" fill="#1B5E8C"/>
+<rect x="100" y="90" width="40" height="110" fill="#2f7fb5"/>
+<rect x="160" y="60" width="40" height="140" fill="#C62828"/>
+<rect x="220" y="100" width="40" height="100" fill="#777777"/>
+<line x1="30" y1="200" x2="290" y2="200" stroke="#1F1F1F" stroke-width="2"/>
+<text x="160" y="30" font-family="sans-serif" font-size="16" text-anchor="middle" fill="#1F1F1F">example asset</text>
+</svg>
