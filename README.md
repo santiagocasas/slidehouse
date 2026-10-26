@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.svg" alt="SlideHouse — local-first editor for Reveal.js decks" width="480">
+</p>
+
 # SlideHouse
 
 A local-first editor for Reveal.js slide decks, with one feature that most
